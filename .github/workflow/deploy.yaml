@@ -21,6 +21,11 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    - name: Make origin_certificate and private_key files for SSL
+      run: |
+        echo ${{ secrets.SSL_ORIGIN_CERTIFICATE }} > origin_certificate
+        echo ${{ secrets.SSL_PRIVATE_KEY }} > private_key
+
     - name: Build and push Docker image
       run: |
         docker buildx build -t ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest .
@@ -36,4 +41,4 @@ jobs:
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
           docker stop personal-website || true
           docker rm personal-website || true
-          docker run -d --name personal-website -p 8000:8000 ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
+          docker run -d --name personal-website -p 443:443 ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest

@@ -11,5 +11,5 @@ RUN pip install --default-timeout=100 --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose port and run app
-EXPOSE 8000
-CMD ["python", "app/run_uvicorn.py", "--dev"]
+EXPOSE 443
+CMD ["python", "app/run_uvicorn.py"]
