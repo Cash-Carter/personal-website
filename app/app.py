@@ -9,7 +9,7 @@ logging.basicConfig(filename="app.log", level=logging.DEBUG,
 
 logger.info("Creating FastAPI app")
 app: FastAPI = FastAPI()
-logger.info("Includeing routers")
+logger.info("Including routers")
 app.include_router(root.router)
 logger.info("Mounting static files")
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
