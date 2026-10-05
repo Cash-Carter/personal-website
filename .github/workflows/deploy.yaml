@@ -28,8 +28,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        sudo docker buildx build -t ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest .
-        sudo docker push ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
+        docker buildx build -t ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest .
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
 
     - name: Deploy to Server
       uses: appleboy/ssh-action@v1
@@ -38,7 +38,7 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
-          sudo docker stop personal-website || true
-          sudo docker rm personal-website || true
-          sudo docker run -d --name personal-website -p 443:443 ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
+          docker stop personal-website || true
+          docker rm personal-website || true
+          docker run -d --name personal-website -p 443:443 ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
