@@ -21,11 +21,11 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Make origin_certificate and private_key files for SSL
-      run: |
-        echo ${{ secrets.SSL_ORIGIN_CERTIFICATE }} > origin_certificate
-        echo ${{ secrets.SSL_PRIVATE_KEY }} > private_key
-        ls
+    - name: Make origin_certificate file
+      run: echo ${{ secrets.SSL_ORIGIN_CERTIFICATE }} > origin_certificate
+    
+    - name: Make private_key file
+      run: echo ${{ secrets.SSL_PRIVATE_KEY }} > private_key
 
     - name: Build and push Docker image
       run: |
