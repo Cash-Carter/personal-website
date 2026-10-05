@@ -21,6 +21,11 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    - name: WHERE AM I
+      run: |
+        pwd
+        ls
+
     - name: Make origin_certificate and private_key files for SSL
       run: |
         echo ${{ secrets.SSL_ORIGIN_CERTIFICATE }} > origin_certificate
