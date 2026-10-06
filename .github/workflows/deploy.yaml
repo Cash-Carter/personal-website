@@ -28,8 +28,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker buildx build -t ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest .
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest
+        docker buildx build --push -t ${{ secrets.DOCKERHUB_USERNAME }}/personal-website:latest .
 
     - name: Deploy to Server
       uses: appleboy/ssh-action@v1
