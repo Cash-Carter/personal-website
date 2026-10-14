@@ -1,0 +1,136 @@
+/*
+Copyright 2026 Cash Carter
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/* general style */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+/* header and navigation bar */
+
+header {
+    position: sticky;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid darkgray;
+}
+
+/* @media (max-width: 350px) {
+    nav {
+        display: none;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 350px) {
+    header button {
+        display: none;
+    }
+} */
+
+header button {
+    justify-self: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+nav li {
+    display: flex;
+    align-items: stretch;
+}
+
+nav a {
+    padding: 3px 5px;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: dimgray;
+}
+
+.separator {
+    width: 1px;
+    align-content: center;
+}
+
+.separator div {
+    background-color: darkgray;
+    height: 50%;
+}
+
+.filler {
+    flex-grow: 1;
+}
+
+/* content */
+
+.content {
+    padding: 1rem;
+}
+
+/* footer */
+
+footer {
+    background-color: dimgrey;
+    padding: 1rem;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    gap: 10px;
+}
+
+.links a {
+    height: 100%;
+    width: auto;
+}
+
+.links img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}

@@ -1,0 +1,76 @@
+<!--
+Copyright 2026 Cash Carter
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU Affero General Public License
+as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Cash Carter</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.ico" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    {{ links | safe }}
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Cash Carter</a>
+                </li>
+                <div class="filler"></div>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <div class="separator">
+                    <div></div>
+                </div>
+                <li>
+                    <a href="/projects">Projects</a>
+                </li>
+                <div class="separator">
+                    <div></div>
+                </div>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    {{ content | safe }}
+
+    <footer>
+        <p>© 2026 Cash Carter</p>
+        <div class="links">
+            <a href="https://github.com/Cash-Carter" target="_blank">
+                <img src="/static/images/GitHub_Invertocat_White.svg" alt="GitHub Profile">
+            </a>
+            <a href="https://www.linkedin.com/in/cash-carter-4830a5350" target="_blank">
+                <img src="/static/images/InBug-White.png" alt="LinkedIn Profile">
+            </a>
+            <a href="https://discord.com/users/436307718165233667" target="_blank">
+                <img src="/static/images/Discord-Symbol-White.svg" alt="Discord Profile">
+            </a>
+        </div>
+        <p>cash.michael.carter@gmail.com</p>
+        <p><a href="https://github.com/Cash-Carter/personal-website" target="_blank">Source</a></p>
+    </footer>
+</body>
+
+</html>

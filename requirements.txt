@@ -43,3 +43,4 @@ uvicorn
 uvloop
 watchfiles
 websockets
+Jinja2
