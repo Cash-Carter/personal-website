@@ -1,1 +1,0 @@
-it crashes if this isnt here because the git repo does not have the static dir if there are no files in it
