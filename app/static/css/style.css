@@ -78,8 +78,12 @@ nav li {
     align-items: stretch;
 }
 
+.title {
+    font-size: larger;
+}
+
 nav a {
-    padding: 3px 5px;
+    padding: 3px 1rem;
     display: flex;
     text-decoration: none;
     color: white;
@@ -97,17 +101,65 @@ nav a:hover {
 
 .separator div {
     background-color: darkgray;
-    height: 50%;
+    height: 1rem;
 }
 
 .filler {
     flex-grow: 1;
 }
 
-/* content */
+/* general */
 
 .content {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* root */
+
+.code {
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: larger;
+    height: 4em;
+    padding: 3px;
+    overflow: hidden;
+    background-color: #303030;
+}
+
+.name {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+}
+
+.language {
+    color: darkgray;
+    font-size: small;
+}
+
+/* projects */
+
+.project {
+    padding: 0.25rem 1rem;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #303030;
+}
+
+/* contact */
+
+.link {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0.5rem 1rem;
+    gap: 10px;
+}
+
+.link img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 /* footer */

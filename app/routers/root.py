@@ -26,4 +26,4 @@ router: APIRouter = APIRouter()
 async def get_root():
     logger.debug("Returning root")
     with open("app/html/root.html") as file:
-        return templates.get_template("header_and_footer.html").render(content=file.read())
+        return templates.get_template("header_and_footer.html").render(links='<script src="/static/js/name.js"></script>', content=file.read())

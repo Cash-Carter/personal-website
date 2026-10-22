@@ -27,3 +27,10 @@ async def get_projects():
     logger.debug("Returning projects")
     with open("app/html/projects.html") as file:
         return templates.get_template("header_and_footer.html").render(content=file.read())
+
+
+@router.get("/projects/{project}", response_class=HTMLResponse)
+async def get_project(project: str):
+    logger.debug(f"Returning projects/{project}")
+    with open(f"app/html/projects/{project}.html") as file:
+        return templates.get_template("header_and_footer.html").render(content=file.read())
