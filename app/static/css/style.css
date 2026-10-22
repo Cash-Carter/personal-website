@@ -112,6 +112,8 @@ nav a:hover {
 
 .content {
     padding: 0.5rem 1rem;
+    max-width: 95vw;
+    overflow: hidden;
 }
 
 /* root */
@@ -119,10 +121,10 @@ nav a:hover {
 .code {
     border: 1px solid gray;
     border-radius: 5px;
-    font-size: larger;
+    font-size: large;
     height: 4em;
     padding: 3px;
-    overflow: hidden;
+    overflow: scroll;
     background-color: #303030;
 }
 
