@@ -23,7 +23,9 @@ logging.basicConfig(filename="app.log", level=logging.DEBUG,
                     format="%(levelname)s:%(name)s:%(asctime)s: %(message)s")
 
 logger.info("Creating FastAPI app")
-app: FastAPI = FastAPI()
+app: FastAPI = FastAPI(license_info={
+    "name": "GNU Affero General Public License v3.0 or later",
+    "identifier": "AGPL-3.0-or-later"})
 logger.info("Including routers")
 app.include_router(about.router)
 app.include_router(contact.router)
